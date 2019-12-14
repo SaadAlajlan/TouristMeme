@@ -9,21 +9,61 @@
 /* Begin PBXBuildFile section */
 		93C6354C23A2E164002C9437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354B23A2E164002C9437 /* AppDelegate.swift */; };
 		93C6354E23A2E164002C9437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354D23A2E164002C9437 /* SceneDelegate.swift */; };
-		93C6355023A2E164002C9437 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354F23A2E164002C9437 /* ViewController.swift */; };
+		93C6355023A2E164002C9437 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354F23A2E164002C9437 /* MapViewController.swift */; };
 		93C6355323A2E164002C9437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C6355123A2E164002C9437 /* Main.storyboard */; };
 		93C6355523A2E168002C9437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C6355423A2E168002C9437 /* Assets.xcassets */; };
 		93C6355823A2E168002C9437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C6355623A2E168002C9437 /* LaunchScreen.storyboard */; };
+		93D2AA7F23A2E6E400402DCA /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA7E23A2E6E400402DCA /* MemeEditorViewController.swift */; };
+		93D2AA8123A2E6F800402DCA /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8023A2E6F800402DCA /* MemeDetailViewController.swift */; };
+		93D2AA8323A2E71600402DCA /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8223A2E71600402DCA /* SentMemesCollectionViewController.swift */; };
+		93D2AA8523A2E73200402DCA /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8423A2E73200402DCA /* SentMemesTableViewController.swift */; };
+		93D2AA8723A2E76D00402DCA /* PicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8623A2E76D00402DCA /* PicCollectionViewController.swift */; };
+		93D2AA8923A2E78400402DCA /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8823A2E78400402DCA /* UIViewController+Additions.swift */; };
+		93D2AA8B23A2E79200402DCA /* PicCollectionViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8A23A2E79200402DCA /* PicCollectionViewController+Extensions.swift */; };
+		93D2AA8D23A2E79F00402DCA /* MapViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8C23A2E79F00402DCA /* MapViewController+Extension.swift */; };
+		93D2AA8F23A2E7BF00402DCA /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA8E23A2E7BF00402DCA /* Flickr.swift */; };
+		93D2AA9123A2E7CC00402DCA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9023A2E7CC00402DCA /* API.swift */; };
+		93D2AA9323A2E7E500402DCA /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9223A2E7E500402DCA /* Meme.swift */; };
+		93D2AA9523A2E80300402DCA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9423A2E80300402DCA /* Photo.swift */; };
+		93D2AA9723A2E81100402DCA /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9623A2E81100402DCA /* Photo+CoreDataProperties.swift */; };
+		93D2AA9B23A2E83200402DCA /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9A23A2E83200402DCA /* Pin.swift */; };
+		93D2AA9D23A2E84600402DCA /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9C23A2E84600402DCA /* Pin+CoreDataProperties.swift */; };
+		93D2AA9F23A2E85700402DCA /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AA9E23A2E85700402DCA /* CoreData.swift */; };
+		93D2AAA123A2E87200402DCA /* SentMemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AAA023A2E87200402DCA /* SentMemesCollectionViewCell.swift */; };
+		93D2AAA323A2E89B00402DCA /* PicCollectionViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AAA223A2E89B00402DCA /* PicCollectionViewControllerCell.swift */; };
+		93D2AAA523A2E8F600402DCA /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AAA423A2E8F600402DCA /* GCDBlackBox.swift */; };
+		93D2AAA823A2F70200402DCA /* Virtual_Tourist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93D2AAA623A2F70200402DCA /* Virtual_Tourist.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93C6354823A2E164002C9437 /* TouristMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouristMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C6354B23A2E164002C9437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C6354D23A2E164002C9437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93C6354F23A2E164002C9437 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93C6354F23A2E164002C9437 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		93C6355223A2E164002C9437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93C6355423A2E168002C9437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C6355723A2E168002C9437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C6355923A2E168002C9437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D2AA7E23A2E6E400402DCA /* MemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorViewController.swift; sourceTree = "<group>"; };
+		93D2AA8023A2E6F800402DCA /* MemeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
+		93D2AA8223A2E71600402DCA /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		93D2AA8423A2E73200402DCA /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
+		93D2AA8623A2E76D00402DCA /* PicCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewController.swift; sourceTree = "<group>"; };
+		93D2AA8823A2E78400402DCA /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		93D2AA8A23A2E79200402DCA /* PicCollectionViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PicCollectionViewController+Extensions.swift"; sourceTree = "<group>"; };
+		93D2AA8C23A2E79F00402DCA /* MapViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Extension.swift"; sourceTree = "<group>"; };
+		93D2AA8E23A2E7BF00402DCA /* Flickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		93D2AA9023A2E7CC00402DCA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		93D2AA9223A2E7E500402DCA /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		93D2AA9423A2E80300402DCA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		93D2AA9623A2E81100402DCA /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93D2AA9A23A2E83200402DCA /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		93D2AA9C23A2E84600402DCA /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93D2AA9E23A2E85700402DCA /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		93D2AAA023A2E87200402DCA /* SentMemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewCell.swift; sourceTree = "<group>"; };
+		93D2AAA223A2E89B00402DCA /* PicCollectionViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicCollectionViewControllerCell.swift; sourceTree = "<group>"; };
+		93D2AAA423A2E8F600402DCA /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		93D2AAA723A2F70200402DCA /* Virtual_Tourist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Tourist.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +98,113 @@
 			children = (
 				93C6354B23A2E164002C9437 /* AppDelegate.swift */,
 				93C6354D23A2E164002C9437 /* SceneDelegate.swift */,
-				93C6354F23A2E164002C9437 /* ViewController.swift */,
-				93C6355123A2E164002C9437 /* Main.storyboard */,
-				93C6355423A2E168002C9437 /* Assets.xcassets */,
-				93C6355623A2E168002C9437 /* LaunchScreen.storyboard */,
 				93C6355923A2E168002C9437 /* Info.plist */,
+				93C6356523A2E201002C9437 /* Resources */,
+				93D2AA7B23A2E60D00402DCA /* StoryBoards */,
+				93C6356423A2E1FC002C9437 /* Utalities */,
+				93C6356223A2E1EF002C9437 /* Extinsions */,
+				93C6356123A2E1E9002C9437 /* Controller */,
+				93C6356323A2E1F5002C9437 /* Model */,
+				93C6355F23A2E1C6002C9437 /* View */,
 			);
 			path = TouristMeme;
+			sourceTree = "<group>";
+		};
+		93C6355F23A2E1C6002C9437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93C6356023A2E1CA002C9437 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93C6356023A2E1CA002C9437 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AAA023A2E87200402DCA /* SentMemesCollectionViewCell.swift */,
+				93D2AAA223A2E89B00402DCA /* PicCollectionViewControllerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		93C6356123A2E1E9002C9437 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93C6354F23A2E164002C9437 /* MapViewController.swift */,
+				93D2AA7E23A2E6E400402DCA /* MemeEditorViewController.swift */,
+				93D2AA8023A2E6F800402DCA /* MemeDetailViewController.swift */,
+				93D2AA8223A2E71600402DCA /* SentMemesCollectionViewController.swift */,
+				93D2AA8423A2E73200402DCA /* SentMemesTableViewController.swift */,
+				93D2AA8623A2E76D00402DCA /* PicCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93C6356223A2E1EF002C9437 /* Extinsions */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AA8823A2E78400402DCA /* UIViewController+Additions.swift */,
+				93D2AA8A23A2E79200402DCA /* PicCollectionViewController+Extensions.swift */,
+				93D2AA8C23A2E79F00402DCA /* MapViewController+Extension.swift */,
+			);
+			path = Extinsions;
+			sourceTree = "<group>";
+		};
+		93C6356323A2E1F5002C9437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AAA623A2F70200402DCA /* Virtual_Tourist.xcdatamodeld */,
+				93D2AA9223A2E7E500402DCA /* Meme.swift */,
+				93D2AA9423A2E80300402DCA /* Photo.swift */,
+				93D2AA9623A2E81100402DCA /* Photo+CoreDataProperties.swift */,
+				93D2AA9A23A2E83200402DCA /* Pin.swift */,
+				93D2AA9C23A2E84600402DCA /* Pin+CoreDataProperties.swift */,
+				93D2AA9E23A2E85700402DCA /* CoreData.swift */,
+				93D2AA7C23A2E62E00402DCA /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93C6356423A2E1FC002C9437 /* Utalities */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AAA423A2E8F600402DCA /* GCDBlackBox.swift */,
+			);
+			path = Utalities;
+			sourceTree = "<group>";
+		};
+		93C6356523A2E201002C9437 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93C6355423A2E168002C9437 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93D2AA7B23A2E60D00402DCA /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				93C6355123A2E164002C9437 /* Main.storyboard */,
+				93C6355623A2E168002C9437 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		93D2AA7C23A2E62E00402DCA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AA9023A2E7CC00402DCA /* API.swift */,
+				93D2AA7D23A2E64300402DCA /* Client */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		93D2AA7D23A2E64300402DCA /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				93D2AA8E23A2E7BF00402DCA /* Flickr.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +278,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C6355023A2E164002C9437 /* ViewController.swift in Sources */,
+				93D2AA8123A2E6F800402DCA /* MemeDetailViewController.swift in Sources */,
+				93D2AAA123A2E87200402DCA /* SentMemesCollectionViewCell.swift in Sources */,
+				93D2AA8D23A2E79F00402DCA /* MapViewController+Extension.swift in Sources */,
+				93D2AA9B23A2E83200402DCA /* Pin.swift in Sources */,
+				93D2AA9F23A2E85700402DCA /* CoreData.swift in Sources */,
+				93D2AA8723A2E76D00402DCA /* PicCollectionViewController.swift in Sources */,
+				93C6355023A2E164002C9437 /* MapViewController.swift in Sources */,
+				93D2AAA823A2F70200402DCA /* Virtual_Tourist.xcdatamodeld in Sources */,
+				93D2AA8523A2E73200402DCA /* SentMemesTableViewController.swift in Sources */,
 				93C6354C23A2E164002C9437 /* AppDelegate.swift in Sources */,
+				93D2AA8923A2E78400402DCA /* UIViewController+Additions.swift in Sources */,
 				93C6354E23A2E164002C9437 /* SceneDelegate.swift in Sources */,
+				93D2AA9123A2E7CC00402DCA /* API.swift in Sources */,
+				93D2AA9D23A2E84600402DCA /* Pin+CoreDataProperties.swift in Sources */,
+				93D2AA9523A2E80300402DCA /* Photo.swift in Sources */,
+				93D2AA9323A2E7E500402DCA /* Meme.swift in Sources */,
+				93D2AA8323A2E71600402DCA /* SentMemesCollectionViewController.swift in Sources */,
+				93D2AA7F23A2E6E400402DCA /* MemeEditorViewController.swift in Sources */,
+				93D2AA8F23A2E7BF00402DCA /* Flickr.swift in Sources */,
+				93D2AAA323A2E89B00402DCA /* PicCollectionViewControllerCell.swift in Sources */,
+				93D2AAA523A2E8F600402DCA /* GCDBlackBox.swift in Sources */,
+				93D2AA9723A2E81100402DCA /* Photo+CoreDataProperties.swift in Sources */,
+				93D2AA8B23A2E79200402DCA /* PicCollectionViewController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7W44F6M2Q;
 				INFOPLIST_FILE = TouristMeme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7W44F6M2Q;
 				INFOPLIST_FILE = TouristMeme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93D2AAA623A2F70200402DCA /* Virtual_Tourist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93D2AAA723A2F70200402DCA /* Virtual_Tourist.xcdatamodel */,
+			);
+			currentVersion = 93D2AAA723A2F70200402DCA /* Virtual_Tourist.xcdatamodel */;
+			path = Virtual_Tourist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93C6354023A2E164002C9437 /* Project object */;
 }
