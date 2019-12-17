@@ -215,7 +215,7 @@ extension PicCollectionViewController{
            
            @objc func reachabilityChanged(note: Notification) {
                
-               let reachability = note.object as! Reachability
+               let reachability = note.object as! Reachability 
                
                switch reachability.connection {
                case .wifi:

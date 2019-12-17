@@ -18,12 +18,14 @@ class SentMemesCollectionViewController:  UICollectionViewController,  UICollect
       }
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var mapButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
-       navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+      // navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         
         initLayout(size: view.frame.size)
     NotificationCenter.default.addObserver(self, selector: #selector(refreshTable), name: NSNotification.Name(rawValue: "refresh") , object: nil)
@@ -57,14 +59,20 @@ class SentMemesCollectionViewController:  UICollectionViewController,  UICollect
     }
     
     
-    @objc func addTapped() {
+    @IBAction func addTapped(_ sender : UIBarButtonItem) {
      
-        
+        if sender == addButton{
         let storyboard = UIStoryboard (name: "Main", bundle: nil)
         let resultVC = storyboard.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
         navigationController!.pushViewController(resultVC, animated: true)
         self.tabBarController?.tabBar.isHidden = true
-        
+        }
+        if sender == mapButton{
+            let storyboard = UIStoryboard (name: "Main", bundle: nil)
+            let resultVC = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            navigationController!.pushViewController(resultVC, animated: true)
+            self.tabBarController?.tabBar.isHidden = true
+        }
         
 
     }

@@ -17,12 +17,14 @@ class SentMemesTableViewController:  UITableViewController {
           return appDelegate.memes
       }
       
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+       // navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,16 +37,23 @@ class SentMemesTableViewController:  UITableViewController {
         
     }
     
-       @objc func addTapped() {
-
+       @IBAction func addTapped(_ sender : UIBarButtonItem) {
+        
+           if sender == addButton{
            let storyboard = UIStoryboard (name: "Main", bundle: nil)
            let resultVC = storyboard.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
            navigationController!.pushViewController(resultVC, animated: true)
-        self.tabBarController?.tabBar.isHidden = true
+           self.tabBarController?.tabBar.isHidden = true
+           }
+           if sender == mapButton{
+               let storyboard = UIStoryboard (name: "Main", bundle: nil)
+               let resultVC = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+            navigationController!.pushViewController(resultVC, animated: true)
+               self.tabBarController?.tabBar.isHidden = true
+           }
+           
 
-
-
-    }
+       }
     
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

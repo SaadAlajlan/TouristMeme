@@ -52,6 +52,7 @@ class MapViewController: UIViewController {
             let storyboard = UIStoryboard (name: "Main", bundle: nil)
             let resultVC = storyboard.instantiateViewController(withIdentifier: "TabBarImagesViewController") as! UIViewController
             navigationController!.pushViewController(resultVC, animated: true)
+            self.navigationController?.navigationBar.isHidden = true
 
         }else if (editButton.title == "Edit") {
             deleteLable.isHidden = false

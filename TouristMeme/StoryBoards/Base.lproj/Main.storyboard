@@ -221,7 +221,7 @@
         <!--Sent Memes Collection View Controller-->
         <scene sceneID="Evp-8J-ffW">
             <objects>
-                <collectionViewController storyboardIdentifier="SentMemesCollectionViewController" id="mZy-xi-TA1" customClass="SentMemesCollectionViewController" customModule="TouristMeme" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="SentMemesCollectionViewController" modalPresentationStyle="fullScreen" id="mZy-xi-TA1" customClass="SentMemesCollectionViewController" customModule="TouristMeme" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pAC-eK-4Jj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,30 +260,22 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="dfZ-Lh-Tgl">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="9qs-nk-UsU">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8iB-Al-2fe">
-                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="map" catalog="system"/>
-                                </button>
+                            <barButtonItem title="Item" image="map" catalog="system" id="jzk-H2-WFM">
                                 <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="tam-Dc-g3R"/>
+                                    <action selector="addTapped:" destination="mZy-xi-TA1" id="xBo-iu-gQV"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="Yo0-nI-YPO">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zeE-DB-TdB">
-                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="plus" catalog="system"/>
-                                </button>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="KbW-mU-2Ei">
                                 <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="CIQ-Xk-hj0"/>
+                                    <action selector="addTapped:" destination="mZy-xi-TA1" id="FH0-73-pAq"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="KbW-mU-2Ei" id="0lr-uo-Tn2"/>
                         <outlet property="flowLayout" destination="Pm8-68-Xpd" id="dAv-EJ-pCg"/>
+                        <outlet property="mapButton" destination="jzk-H2-WFM" id="qHd-EN-MxT"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfl-Fq-rUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -336,28 +328,22 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="MzF-gu-4BD">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="pxb-tA-Q9R">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aX0-Gm-rQr">
-                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="map" catalog="system"/>
-                                </button>
+                            <barButtonItem title="Item" image="map" catalog="system" id="Irt-UT-5NK">
                                 <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="vwD-he-7Ah"/>
+                                    <action selector="addTapped:" destination="4lY-Ox-Tzh" id="Ljk-oc-6Ks"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="Nwc-06-i7K">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mRu-pf-DWw">
-                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="plus" catalog="system"/>
-                                </button>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="QpK-vS-yq6">
                                 <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="0no-XC-p08"/>
+                                    <action selector="addTapped:" destination="4lY-Ox-Tzh" id="8rC-ZB-3zJ"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="QpK-vS-yq6" id="KLR-nb-5Np"/>
+                        <outlet property="mapButton" destination="Irt-UT-5NK" id="o2f-Lc-kUx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yj-d8-u95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -431,30 +417,7 @@
         <scene sceneID="L9o-tz-qpU">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarImagesViewController" id="dQ5-pa-xA5" customClass="TabBarImagesViewController" customModule="TouristMeme" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ute-cL-8EO">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="CSj-w2-wEq">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ifK-TN-PA2">
-                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="map" catalog="system"/>
-                                </button>
-                                <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="Lfu-tY-zLY"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="jPO-WN-2Uj">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kXW-5q-D1v">
-                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="plus" catalog="system"/>
-                                </button>
-                                <connections>
-                                    <action selector="action:" destination="dQ5-pa-xA5" id="mRD-Gp-U8c"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ute-cL-8EO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hST-1Y-ftY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -463,8 +426,6 @@
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
-                        <outlet property="addButton" destination="jPO-WN-2Uj" id="8nH-SE-b1r"/>
-                        <outlet property="mapButton" destination="CSj-w2-wEq" id="FV4-vJ-cd6"/>
                         <segue destination="1vF-a6-tOm" kind="relationship" relationship="viewControllers" id="WBc-pd-sSu"/>
                         <segue destination="nte-AP-K6X" kind="relationship" relationship="viewControllers" id="mPC-K2-gtz"/>
                     </connections>
@@ -476,6 +437,7 @@
         <!--Navigation Controller-->
         <scene sceneID="6kT-q8-eHp">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LI-I3-C3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AaP-Kh-qgu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9np-8E-nt2">
@@ -488,7 +450,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UHc-Wa-sqF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5LI-I3-C3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="134"/>
         </scene>
