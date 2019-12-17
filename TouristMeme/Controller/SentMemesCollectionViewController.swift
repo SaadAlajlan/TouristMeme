@@ -56,6 +56,7 @@ class SentMemesCollectionViewController:  UICollectionViewController,  UICollect
         
     }
     
+    
     @objc func addTapped() {
      
         
@@ -114,5 +115,7 @@ class SentMemesCollectionViewController:  UICollectionViewController,  UICollect
         return CGSize(width: (bounds.width/2)-4 , height: bounds.height/2)
         
         
-    }}
+    }
+    
+}
 

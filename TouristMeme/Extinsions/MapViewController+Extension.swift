@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import CoreData
-
+import SystemConfiguration
 
 
 extension MapViewController: MKMapViewDelegate {
@@ -43,6 +43,7 @@ extension MapViewController: MKMapViewDelegate {
     
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        checkReachable()
         let coordinate = view.annotation?.coordinate
         if (onEdit) {
             
@@ -69,4 +70,66 @@ extension MapViewController: MKMapViewDelegate {
             self.navigationController?.pushViewController(vc, animated: false)
         }
     }
+}
+extension MapViewController{
+    func checkReachable()
+           {
+               var flags = SCNetworkReachabilityFlags()
+               SCNetworkReachabilityGetFlags(self.reachability!, &flags) 
+               
+               if (isNetworkReachable(with: flags))
+               {
+                   print (flags)
+                   if flags.contains(.isWWAN) {
+                       //self.alert(message:"via mobile",title:"Reachable")
+                       return
+                   }
+                   
+                   //self.alert(message:"via wifi",title:"Reachable")
+               }
+               else if (!isNetworkReachable(with: flags)) {
+                   self.alert(message:"Sorry no connection",title: "unreachable")
+                   print (flags)
+                   return
+               }
+           }
+           
+           
+           private func isNetworkReachable(with flags: SCNetworkReachabilityFlags) -> Bool {
+               let isReachable = flags.contains(.reachable)
+               let needsConnection = flags.contains(.connectionRequired)
+               let canConnectAutomatically = flags.contains(.connectionOnDemand) || flags.contains(.connectionOnTraffic)
+               let canConnectWithoutUserInteraction = canConnectAutomatically && !flags.contains(.interventionRequired)
+               return isReachable && (!needsConnection || canConnectWithoutUserInteraction)
+           }
+
+           /*
+           private func setReachabilityNotifier () {
+               //declare this inside of viewWillAppear
+               
+               NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+               do{
+                   try reachability.startNotifier()
+               }catch{
+                   print("could not start reachability notifier")
+               }
+           }
+           */
+           
+           @objc func reachabilityChanged(note: Notification) {
+               
+               let reachability = note.object as! Reachability
+               
+               switch reachability.connection {
+               case .wifi:
+                   print("Reachable via WiFi")
+               case .cellular:
+                   print("Reachable via Cellular")
+               case .none:
+                   print("Network not reachable")
+               case .unavailable:
+                   print("Network not reachable")
+               }
+           }
+    
 }

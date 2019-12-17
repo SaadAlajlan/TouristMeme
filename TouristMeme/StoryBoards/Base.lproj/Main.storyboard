@@ -221,7 +221,6 @@
         <!--Sent Memes Collection View Controller-->
         <scene sceneID="Evp-8J-ffW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gfl-Fq-rUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <collectionViewController storyboardIdentifier="SentMemesCollectionViewController" id="mZy-xi-TA1" customClass="SentMemesCollectionViewController" customModule="TouristMeme" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="pAC-eK-4Jj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -259,11 +258,35 @@
                             <outlet property="delegate" destination="mZy-xi-TA1" id="np6-dT-H3s"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ohB-87-Wpc"/>
+                    <navigationItem key="navigationItem" id="dfZ-Lh-Tgl">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="9qs-nk-UsU">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8iB-Al-2fe">
+                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="map" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="tam-Dc-g3R"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="Yo0-nI-YPO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zeE-DB-TdB">
+                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="plus" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="CIQ-Xk-hj0"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="Pm8-68-Xpd" id="dAv-EJ-pCg"/>
                     </connections>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfl-Fq-rUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5031" y="-135"/>
         </scene>
@@ -311,7 +334,30 @@
                             <outlet property="delegate" destination="4lY-Ox-Tzh" id="CuN-6P-gTg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="FbH-Wm-krR"/>
+                    <navigationItem key="navigationItem" id="MzF-gu-4BD">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="pxb-tA-Q9R">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aX0-Gm-rQr">
+                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="map" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="vwD-he-7Ah"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="Nwc-06-i7K">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mRu-pf-DWw">
+                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="plus" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="0no-XC-p08"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yj-d8-u95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,7 +415,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ImagesController" id="cue-Na-xyN" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0ha-hD-xxv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </navigationBar>
@@ -385,7 +431,30 @@
         <scene sceneID="L9o-tz-qpU">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarImagesViewController" id="dQ5-pa-xA5" customClass="TabBarImagesViewController" customModule="TouristMeme" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ute-cL-8EO"/>
+                    <navigationItem key="navigationItem" id="ute-cL-8EO">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="CSj-w2-wEq">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ifK-TN-PA2">
+                                    <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="map" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="Lfu-tY-zLY"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="jPO-WN-2Uj">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kXW-5q-D1v">
+                                    <rect key="frame" x="256" y="11" width="18" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="plus" catalog="system"/>
+                                </button>
+                                <connections>
+                                    <action selector="action:" destination="dQ5-pa-xA5" id="mRD-Gp-U8c"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hST-1Y-ftY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -394,6 +463,8 @@
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
+                        <outlet property="addButton" destination="jPO-WN-2Uj" id="8nH-SE-b1r"/>
+                        <outlet property="mapButton" destination="CSj-w2-wEq" id="FV4-vJ-cd6"/>
                         <segue destination="1vF-a6-tOm" kind="relationship" relationship="viewControllers" id="WBc-pd-sSu"/>
                         <segue destination="nte-AP-K6X" kind="relationship" relationship="viewControllers" id="mPC-K2-gtz"/>
                     </connections>
@@ -539,8 +610,10 @@
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="f.cursive" catalog="system" width="56" height="64"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
+        <image name="map" catalog="system" width="64" height="56"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
-        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="photo.on.rectangle" catalog="system" width="32" height="32"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <image name="square.grid.4x3.fill" catalog="system" width="64" height="42"/>
     </resources>

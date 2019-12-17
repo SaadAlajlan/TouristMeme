@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MapKit
 import CoreData
+import SystemConfiguration
 
 
 
@@ -19,6 +20,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var photos: UIBarButtonItem!
     
+     let reachability = SCNetworkReachabilityCreateWithName(nil, "www.raywenderlich.com")
     var coreDataStack: CoreDataStack?
     var onEdit = false
     var locations = [Pin]()
@@ -32,7 +34,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+                self.checkReachable()
         let delegate = UIApplication.shared.delegate as! AppDelegate
         coreDataStack = delegate.stack
         mapView.delegate = self
@@ -64,7 +66,7 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func onLongPressAction(_ sender: Any) {
-        
+        checkReachable()
         let longPress = sender as? UILongPressGestureRecognizer
         
         let pressPoint = longPress?.location(in: mapView)
@@ -182,5 +184,10 @@ class MapViewController: UIViewController {
         return location
     }
     
-}
+//
+//        override func didReceiveMemoryWarning() {
+//            super.didReceiveMemoryWarning()
+//        }
+    }
+    
 

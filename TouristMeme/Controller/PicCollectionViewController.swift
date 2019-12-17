@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 import UIKit
 import MapKit
-
+import SystemConfiguration
 
 
 
@@ -37,6 +37,7 @@ class PicCollectionViewController: UIViewController {
     var selectedIndexes = [IndexPath]()
     var memeIndex = IndexPath()
     
+     let reachability = SCNetworkReachabilityCreateWithName(nil, "www.raywenderlich.com")
     
     
     
@@ -67,7 +68,7 @@ class PicCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        checkReachable()
         let delegate = UIApplication.shared.delegate as! AppDelegate
         coreDataStack = delegate.stack
         
@@ -106,7 +107,8 @@ class PicCollectionViewController: UIViewController {
         
         
         if (collectionButton.titleLabel?.text == "New Collection") {
-            
+         
+            checkReachable()
             collectionButton.isEnabled = false
             
             clearImages()
@@ -124,6 +126,7 @@ class PicCollectionViewController: UIViewController {
             downloadImages()
             
         } else {
+            checkReachable()
             deleteSelectedImage()
         }
     }
@@ -193,6 +196,7 @@ class PicCollectionViewController: UIViewController {
     }
     
      func downloadImages() {
+        
         coreDataStack?.performBackgroundBatchOperation { (workerContext) in
             for image in self.fetchedResultsController.fetchedObjects! {
                 if image.nsData == nil {

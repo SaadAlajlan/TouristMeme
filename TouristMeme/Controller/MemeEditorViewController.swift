@@ -227,7 +227,10 @@ UINavigationControllerDelegate ,UITextFieldDelegate {
             if completed {
                 self.saveMeme(image)
                 self.dismiss(animated: true, completion: nil)
-                self.navigationController?.popToRootViewController(animated: true)
+                
+                       let detailController = self.storyboard!.instantiateViewController(withIdentifier: "TabBarImagesViewController") as! UIViewController
+                       self.navigationController!.pushViewController(detailController, animated: true)
+                
             }
         }
     }

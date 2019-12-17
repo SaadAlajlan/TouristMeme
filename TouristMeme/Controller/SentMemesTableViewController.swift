@@ -36,14 +36,14 @@ class SentMemesTableViewController:  UITableViewController {
     }
     
        @objc func addTapped() {
-                 
+
            let storyboard = UIStoryboard (name: "Main", bundle: nil)
            let resultVC = storyboard.instantiateViewController(withIdentifier: "MemeEditorViewController") as! MemeEditorViewController
            navigationController!.pushViewController(resultVC, animated: true)
         self.tabBarController?.tabBar.isHidden = true
-               
 
-   
+
+
     }
     
 
