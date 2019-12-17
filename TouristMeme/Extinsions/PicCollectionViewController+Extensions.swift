@@ -224,8 +224,7 @@ extension PicCollectionViewController{
                    print("Reachable via Cellular")
                case .none:
                    print("Network not reachable")
-               case .unavailable:
-                   print("Network not reachable")
+               
                }
            }
 }

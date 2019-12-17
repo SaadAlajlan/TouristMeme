@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9376548623A996DD007A9CB5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9376548523A996DD007A9CB5 /* Reachability.swift */; };
 		93C6354C23A2E164002C9437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354B23A2E164002C9437 /* AppDelegate.swift */; };
 		93C6354E23A2E164002C9437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354D23A2E164002C9437 /* SceneDelegate.swift */; };
 		93C6355023A2E164002C9437 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6354F23A2E164002C9437 /* MapViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9376548523A996DD007A9CB5 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		93C6354823A2E164002C9437 /* TouristMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouristMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C6354B23A2E164002C9437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C6354D23A2E164002C9437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				93D2AAA423A2E8F600402DCA /* GCDBlackBox.swift */,
+				9376548523A996DD007A9CB5 /* Reachability.swift */,
 			);
 			path = Utalities;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				93C6354E23A2E164002C9437 /* SceneDelegate.swift in Sources */,
 				93D2AA9123A2E7CC00402DCA /* API.swift in Sources */,
 				93D2AA9D23A2E84600402DCA /* Pin+CoreDataProperties.swift in Sources */,
+				9376548623A996DD007A9CB5 /* Reachability.swift in Sources */,
 				93D2AA9523A2E80300402DCA /* Photo.swift in Sources */,
 				93D2AA9323A2E7E500402DCA /* Meme.swift in Sources */,
 				93D2AA8323A2E71600402DCA /* SentMemesCollectionViewController.swift in Sources */,
